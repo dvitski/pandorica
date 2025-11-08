@@ -1,0 +1,51 @@
+{
+	"schemaVersion": 1,
+	"id": "pandorica",
+	"version": "${version}",
+	"name": "Pandorica",
+	"description": "",
+	"authors": [
+		"dvitski"
+	],
+	"contact": {
+		"homepage": "https://dvitski.cc",
+        "sources": "https://github.com/dvitski/pandorica",
+        "issues": "https://github.com/dvitski/pandorica/issues"
+	},
+	"license": "MIT",
+	"icon": "assets/pandorica/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "cc.dvitski.pandorica.Pandorica",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "cc.dvitski.pandorica.client.PandoricaClient",
+				"adapter": "kotlin"
+			}
+		],
+		"fabric-datagen": [
+			{
+				"value": "cc.dvitski.pandorica.data.PandoricaDataGenerator",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+        "pandorica.mixins.json",
+		{
+			"config": "pandorica.client.mixins.json",
+			"environment": "client"
+		}
+	],
+    "accessWidener": "pandorica.accesswidener",
+	"depends": {
+		"minecraft": "~1.21.10",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*"
+	}
+}
