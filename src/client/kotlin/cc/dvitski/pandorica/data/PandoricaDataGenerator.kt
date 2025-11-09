@@ -1,6 +1,7 @@
 package cc.dvitski.pandorica.data
 
 import cc.dvitski.pandorica.data.client.LanguageProvider
+import cc.dvitski.pandorica.data.client.ModelProvider
 import cc.dvitski.pandorica.data.server.EnchantmentProvider
 import cc.dvitski.pandorica.data.server.EnchantmentTagProvider
 import cc.dvitski.pandorica.data.server.ItemTagProvider
@@ -17,5 +18,6 @@ object PandoricaDataGenerator : DataGeneratorEntrypoint {
         pack.addProvider(::EnchantmentTagProvider)
 
         pack.addProvider(::LanguageProvider)
+        pack.addProvider(::ModelProvider)
 	}
 }

@@ -1,6 +1,9 @@
 package cc.dvitski.pandorica
 
+import cc.dvitski.pandorica.item.PandoricaItemGroups
+import cc.dvitski.pandorica.item.PandoricaItems
 import net.fabricmc.api.ModInitializer
+import net.minecraft.core.Registry
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 
@@ -10,7 +13,18 @@ object Pandorica : ModInitializer {
 
     val logger: Logger = LoggerFactory.getLogger(MOD_ID)
 
+    @Suppress("UnusedExpression")
     override fun onInitialize() {
         logger.info("Initializing $MOD_NAME")
+
+        PandoricaItems
+        PandoricaItemGroups
+    }
+
+    fun <T : Any?> Registry<T>.filterPandoricaMod(): List<T> {
+        return filter { obj ->
+            val location = getKey(obj)
+            location?.namespace == MOD_ID
+        }
     }
 }

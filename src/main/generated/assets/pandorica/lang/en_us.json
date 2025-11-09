@@ -1,1 +1,6 @@
-{}
+{
+  "item.pandorica.basalt_dust": "Basalt Dust",
+  "item.pandorica.crusted_magma": "Crusted Magma",
+  "item.pandorica.liquefied_bone": "Liquefied Bone",
+  "itemGroup.pandorica.item_group": "Pandorica"
+}
