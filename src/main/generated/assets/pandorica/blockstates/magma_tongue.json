@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "tongues=1": {
+      "model": "pandorica:block/magma_tongue1"
+    },
+    "tongues=2": {
+      "model": "pandorica:block/magma_tongue2"
+    },
+    "tongues=3": {
+      "model": "pandorica:block/magma_tongue3"
+    },
+    "tongues=4": {
+      "model": "pandorica:block/magma_tongue4"
+    },
+    "tongues=5": {
+      "model": "pandorica:block/magma_tongue5"
+    }
+  }
+}

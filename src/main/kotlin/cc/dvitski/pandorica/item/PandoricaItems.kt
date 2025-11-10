@@ -1,10 +1,10 @@
 package cc.dvitski.pandorica.item
 
 import cc.dvitski.pandorica.Pandorica
+import cc.dvitski.pandorica.block.PandoricaBlocks
 import net.minecraft.core.registries.Registries
 import net.minecraft.resources.ResourceKey
 import net.minecraft.resources.ResourceLocation
-import net.minecraft.world.item.BlockItem
 import net.minecraft.world.item.Item
 import net.minecraft.world.item.Items
 import net.minecraft.world.level.block.Block
@@ -14,8 +14,10 @@ object PandoricaItems {
     val CRUSTED_MAGMA = register("crusted_magma")
     val LIQUEFIED_BONE = register("liquefied_bone")
 
-    private fun register(id: String, block: Block): Item {
-        return register(id) { BlockItem(block, Item.Properties()) }
+    val MAGMA_TONGUE = register(PandoricaBlocks.MAGMA_TONGUE)
+
+    private fun register(block: Block): Item {
+        return Items.registerBlock(block)
     }
 
     private fun register(id: String, factory: (Item.Properties) -> Item = ::Item): Item {

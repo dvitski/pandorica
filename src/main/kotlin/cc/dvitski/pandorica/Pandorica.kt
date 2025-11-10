@@ -1,5 +1,6 @@
 package cc.dvitski.pandorica
 
+import cc.dvitski.pandorica.block.PandoricaBlocks
 import cc.dvitski.pandorica.item.PandoricaItemGroups
 import cc.dvitski.pandorica.item.PandoricaItems
 import net.fabricmc.api.ModInitializer
@@ -17,6 +18,7 @@ object Pandorica : ModInitializer {
     override fun onInitialize() {
         logger.info("Initializing $MOD_NAME")
 
+        PandoricaBlocks
         PandoricaItems
         PandoricaItemGroups
     }

@@ -1,0 +1,90 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "conditions": [
+                {
+                  "block": "pandorica:magma_tongue",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "tongues": "1"
+                  }
+                }
+              ],
+              "count": 1.0,
+              "function": "minecraft:set_count"
+            },
+            {
+              "add": false,
+              "conditions": [
+                {
+                  "block": "pandorica:magma_tongue",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "tongues": "2"
+                  }
+                }
+              ],
+              "count": 2.0,
+              "function": "minecraft:set_count"
+            },
+            {
+              "add": false,
+              "conditions": [
+                {
+                  "block": "pandorica:magma_tongue",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "tongues": "3"
+                  }
+                }
+              ],
+              "count": 3.0,
+              "function": "minecraft:set_count"
+            },
+            {
+              "add": false,
+              "conditions": [
+                {
+                  "block": "pandorica:magma_tongue",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "tongues": "4"
+                  }
+                }
+              ],
+              "count": 4.0,
+              "function": "minecraft:set_count"
+            },
+            {
+              "add": false,
+              "conditions": [
+                {
+                  "block": "pandorica:magma_tongue",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "tongues": "5"
+                  }
+                }
+              ],
+              "count": 5.0,
+              "function": "minecraft:set_count"
+            },
+            {
+              "function": "minecraft:explosion_decay"
+            }
+          ],
+          "name": "pandorica:magma_tongue"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ]
+}

@@ -14,5 +14,6 @@ class LanguageProvider(output: FabricDataOutput, future: CompletableFuture<Holde
         builder.add(PandoricaItems.BASALT_DUST, "Basalt Dust")
         builder.add(PandoricaItems.CRUSTED_MAGMA, "Crusted Magma")
         builder.add(PandoricaItems.LIQUEFIED_BONE, "Liquefied Bone")
+        builder.add(PandoricaItems.MAGMA_TONGUE, "Magma Tongue")
     }
 }
