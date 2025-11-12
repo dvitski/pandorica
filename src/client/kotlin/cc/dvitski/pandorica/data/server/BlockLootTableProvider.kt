@@ -22,6 +22,7 @@ class BlockLootTableProvider(output: FabricDataOutput, lookup: CompletableFuture
     }
 
     fun createMagmaTongue(block: Block): LootTable.Builder {
+        val property = MagmaTongueBlock.TONGUES
         return LootTable.lootTable()
             .withPool(
                 LootPool.lootPool()
@@ -31,16 +32,13 @@ class BlockLootTableProvider(output: FabricDataOutput, lookup: CompletableFuture
                             block,
                             LootItem.lootTableItem(block)
                                 .apply(
-                                    IntStream.rangeClosed(1, MagmaTongueBlock.TONGUES.max).boxed().toList()
+                                    IntStream.rangeClosed(property.min, property.max).boxed().toList()
                                 ) { integer ->
                                     SetItemCountFunction.setCount(ConstantValue.exactly(integer.toFloat()))
                                         .`when`(
                                             LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
                                                 .setProperties(
-                                                    StatePropertiesPredicate.Builder.properties().hasProperty(
-                                                        MagmaTongueBlock.TONGUES,
-                                                        integer
-                                                    )
+                                                    StatePropertiesPredicate.Builder.properties().hasProperty(property, integer)
                                                 )
                                         )
                                 }

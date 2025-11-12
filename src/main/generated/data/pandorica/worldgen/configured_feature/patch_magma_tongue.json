@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:nether_forest_vegetation",
+  "config": {
+    "spread_height": 4,
+    "spread_width": 4,
+    "state_provider": {
+      "type": "minecraft:randomized_int_state_provider",
+      "property": "tongues",
+      "source": {
+        "type": "minecraft:simple_state_provider",
+        "state": {
+          "Name": "pandorica:magma_tongue",
+          "Properties": {
+            "tongues": "1",
+            "waterlogged": "false"
+          }
+        }
+      },
+      "values": {
+        "type": "minecraft:biased_to_bottom",
+        "max_inclusive": 5,
+        "min_inclusive": 1
+      }
+    }
+  }
+}

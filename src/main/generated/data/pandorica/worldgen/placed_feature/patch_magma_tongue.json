@@ -1,0 +1,16 @@
+{
+  "feature": "pandorica:patch_magma_tongue",
+  "placement": [
+    {
+      "type": "minecraft:count_on_every_layer",
+      "count": 6
+    },
+    {
+      "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 3
+    }
+  ]
+}

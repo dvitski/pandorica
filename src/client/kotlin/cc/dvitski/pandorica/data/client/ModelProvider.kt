@@ -32,10 +32,9 @@ class ModelProvider(output: FabricDataOutput) : FabricModelProvider(output) {
                 MultiVariantGenerator.dispatch(block)
                     .with(
                         PropertyDispatch.initial(MagmaTongueBlock.TONGUES).also { dispatch ->
-                            for (i in 0 until MagmaTongueBlock.TONGUES.max) {
-                                val v = i + 1
-                                val variant = BlockModelGenerators.plainVariant(ModelLocationUtils.getModelLocation(block, "$v"))
-                                dispatch.select(v, variant)
+                            MagmaTongueBlock.TONGUES.possibleValues.forEach { i ->
+                                val variant = BlockModelGenerators.plainVariant(ModelLocationUtils.getModelLocation(block, "$i"))
+                                dispatch.select(i, variant)
                             }
                         }
                     )

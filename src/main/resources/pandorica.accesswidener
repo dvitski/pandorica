@@ -1,4 +1,5 @@
 accessWidener v2 named
 
 accessible field net/minecraft/world/entity/vehicle/AbstractBoat status Lnet/minecraft/world/entity/vehicle/AbstractBoat$Status;
+accessible field net/minecraft/world/level/block/state/properties/IntegerProperty min I
 accessible field net/minecraft/world/level/block/state/properties/IntegerProperty max I
