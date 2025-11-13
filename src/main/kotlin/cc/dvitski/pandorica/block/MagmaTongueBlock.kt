@@ -1,11 +1,13 @@
 package cc.dvitski.pandorica.block
 
+import cc.dvitski.pandorica.particle.PandoricaParticleTypes
 import com.mojang.serialization.MapCodec
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
 import net.minecraft.util.RandomSource
 import net.minecraft.world.item.context.BlockPlaceContext
 import net.minecraft.world.level.BlockGetter
+import net.minecraft.world.level.Level
 import net.minecraft.world.level.LevelReader
 import net.minecraft.world.level.ScheduledTickAccess
 import net.minecraft.world.level.block.AmethystClusterBlock
@@ -28,6 +30,18 @@ class MagmaTongueBlock(properties: Properties) : VegetationBlock(properties), Si
                 .setValue(TONGUES, 1)
                 .setValue(WATERLOGGED, false)
         )
+    }
+
+    override fun animateTick(state: BlockState, level: Level, pos: BlockPos, random: RandomSource) {
+        if (!state.getValue(WATERLOGGED) && random.nextInt(TONGUES.max * 2) <= state.getValue(TONGUES)) {
+            val j = random.nextInt(2) * 2 - 1
+            val k = random.nextInt(2) * 2 - 1
+            val x = pos.x + 0.5 + 0.25 * j
+            val y = pos.y + random.nextDouble()
+            val z = pos.z + 0.5 + 0.25 * k
+
+            level.addParticle(PandoricaParticleTypes.SIZZLE, x, y, z, 0.0, 0.0, 0.0)
+        }
     }
 
     override fun getStateForPlacement(context: BlockPlaceContext): BlockState? {

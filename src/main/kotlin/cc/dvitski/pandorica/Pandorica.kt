@@ -3,6 +3,7 @@ package cc.dvitski.pandorica
 import cc.dvitski.pandorica.block.PandoricaBlocks
 import cc.dvitski.pandorica.item.PandoricaItemGroups
 import cc.dvitski.pandorica.item.PandoricaItems
+import cc.dvitski.pandorica.particle.PandoricaParticleTypes
 import cc.dvitski.pandorica.worldgen.PandoricaPlacedFeatures
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications
@@ -23,6 +24,7 @@ object Pandorica : ModInitializer {
     override fun onInitialize() {
         logger.info("Initializing $MOD_NAME")
 
+        PandoricaParticleTypes
         PandoricaBlocks
         PandoricaItems
         PandoricaItemGroups
