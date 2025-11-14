@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:simple_block",
+  "config": {
+    "to_place": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "minecraft:netherrack"
+          },
+          "weight": 16
+        },
+        {
+          "data": {
+            "Name": "pandorica:crumbled_basalt"
+          },
+          "weight": 3
+        },
+        {
+          "data": {
+            "Name": "minecraft:nether_wart_block"
+          },
+          "weight": 2
+        },
+        {
+          "data": {
+            "Name": "minecraft:magma_block"
+          },
+          "weight": 2
+        },
+        {
+          "data": {
+            "Name": "minecraft:soul_sand"
+          },
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

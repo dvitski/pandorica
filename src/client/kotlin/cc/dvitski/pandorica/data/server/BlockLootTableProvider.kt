@@ -2,6 +2,7 @@ package cc.dvitski.pandorica.data.server
 
 import cc.dvitski.pandorica.block.MagmaTongueBlock
 import cc.dvitski.pandorica.block.PandoricaBlocks
+import cc.dvitski.pandorica.item.PandoricaItems
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider
 import net.minecraft.advancements.critereon.StatePropertiesPredicate
@@ -19,6 +20,7 @@ import java.util.stream.IntStream
 class BlockLootTableProvider(output: FabricDataOutput, lookup: CompletableFuture<HolderLookup.Provider>) : FabricBlockLootTableProvider(output, lookup) {
     override fun generate() {
         add(PandoricaBlocks.MAGMA_TONGUE, ::createMagmaTongue)
+        add(PandoricaBlocks.CRUMBLED_BASALT) { createSingleItemTableWithSilkTouch(it, PandoricaItems.BASALT_DUST, ConstantValue.exactly(4.0f)) }
     }
 
     fun createMagmaTongue(block: Block): LootTable.Builder {

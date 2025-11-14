@@ -1,8 +1,8 @@
 package cc.dvitski.pandorica.data.server
 
 import cc.dvitski.pandorica.Pandorica
-import cc.dvitski.pandorica.worldgen.PandoricaConfiguredFeatures
-import cc.dvitski.pandorica.worldgen.PandoricaPlacedFeatures
+import cc.dvitski.pandorica.world.gen.PandoricaConfiguredFeatures
+import cc.dvitski.pandorica.world.gen.PandoricaPlacedFeatures
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider
 import net.minecraft.core.HolderLookup

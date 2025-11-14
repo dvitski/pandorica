@@ -4,8 +4,10 @@ import cc.dvitski.pandorica.Pandorica
 import net.minecraft.core.registries.Registries
 import net.minecraft.resources.ResourceKey
 import net.minecraft.resources.ResourceLocation
+import net.minecraft.util.ColorRGBA
 import net.minecraft.world.level.block.Block
 import net.minecraft.world.level.block.Blocks
+import net.minecraft.world.level.block.ColoredFallingBlock
 import net.minecraft.world.level.block.SlabBlock
 import net.minecraft.world.level.block.SoundType
 import net.minecraft.world.level.block.StairBlock
@@ -22,6 +24,11 @@ object PandoricaBlocks {
             .sound(SoundType.NETHER_SPROUTS)
             .noOcclusion()
             .noCollision()
+    }
+
+    val CRUMBLED_BASALT = register("crumbled_basalt", { ColoredFallingBlock(ColorRGBA(0x52555B), it) }) {
+        it.strength(0.5f)
+            .sound(SoundType.SAND)
     }
 
     private fun register(id: String, factory: (BlockBehaviour.Properties) -> Block, properties: BlockBehaviour.Properties): Block {

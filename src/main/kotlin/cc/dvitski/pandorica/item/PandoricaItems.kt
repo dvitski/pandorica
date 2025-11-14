@@ -10,11 +10,14 @@ import net.minecraft.world.item.Items
 import net.minecraft.world.level.block.Block
 
 object PandoricaItems {
+    val MAGMA_TONGUE = register(PandoricaBlocks.MAGMA_TONGUE)
+    val CRUMBLED_BASALT = register(PandoricaBlocks.CRUMBLED_BASALT)
+
     val BASALT_DUST = register("basalt_dust")
     val CRUSTED_MAGMA = register("crusted_magma")
     val LIQUEFIED_BONE = register("liquefied_bone")
-
-    val MAGMA_TONGUE = register(PandoricaBlocks.MAGMA_TONGUE)
+    val WITHERED_BONE = register("withered_bone")
+    val WITHERMEAL = register("withermeal", ::WithermealItem)
 
     private fun register(block: Block): Item {
         return Items.registerBlock(block)

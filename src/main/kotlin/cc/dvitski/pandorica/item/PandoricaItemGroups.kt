@@ -14,7 +14,7 @@ object PandoricaItemGroups {
     val ITEM_GROUP = register("item_group",
         FabricItemGroup.builder()
             .title(Component.translatable("itemGroup.${Pandorica.MOD_ID}.item_group"))
-            .icon { ItemStack(PandoricaItems.LIQUEFIED_BONE) }
+            .icon { ItemStack(PandoricaItems.WITHERED_BONE) }
             .displayItems { _, entries ->
                 BuiltInRegistries.ITEM.filterPandoricaMod().forEach(entries::accept)
             }

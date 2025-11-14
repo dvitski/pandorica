@@ -16,12 +16,15 @@ import net.minecraft.world.level.block.Block
 class ModelProvider(output: FabricDataOutput) : FabricModelProvider(output) {
     override fun generateBlockStateModels(generator: BlockModelGenerators) {
         generator.createMagmaTongue(PandoricaBlocks.MAGMA_TONGUE)
+        generator.createTrivialCube(PandoricaBlocks.CRUMBLED_BASALT)
     }
 
     override fun generateItemModels(generator: ItemModelGenerators) {
         generator.generateFlatItem(PandoricaItems.BASALT_DUST, ModelTemplates.FLAT_ITEM)
         generator.generateFlatItem(PandoricaItems.CRUSTED_MAGMA, ModelTemplates.FLAT_ITEM)
         generator.generateFlatItem(PandoricaItems.LIQUEFIED_BONE, ModelTemplates.FLAT_ITEM)
+        generator.generateFlatItem(PandoricaItems.WITHERED_BONE, ModelTemplates.FLAT_ITEM)
+        generator.generateFlatItem(PandoricaItems.WITHERMEAL, ModelTemplates.FLAT_ITEM)
     }
 
     companion object {
