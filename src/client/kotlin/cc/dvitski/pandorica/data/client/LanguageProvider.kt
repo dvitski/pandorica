@@ -2,6 +2,7 @@ package cc.dvitski.pandorica.data.client
 
 import cc.dvitski.pandorica.Pandorica
 import cc.dvitski.pandorica.block.PandoricaBlocks
+import cc.dvitski.pandorica.entity.PandoricaEntityTypes
 import cc.dvitski.pandorica.item.PandoricaItems
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider
@@ -17,7 +18,9 @@ class LanguageProvider(output: FabricDataOutput, future: CompletableFuture<Holde
         builder.add(PandoricaItems.LIQUEFIED_BONE, "Liquefied Bone")
         builder.add(PandoricaItems.WITHERED_BONE, "Withered Bone")
         builder.add(PandoricaItems.WITHERMEAL, "Withermeal")
+        builder.add(PandoricaItems.LIQUEFIED_SKELETON_SPAWN_EGG, "Liquefied Skeleton Spawn Egg")
         builder.add(PandoricaBlocks.MAGMA_TONGUE, "Magma Tongue")
         builder.add(PandoricaBlocks.CRUMBLED_BASALT, "Crumbled Basalt")
+        builder.add(PandoricaEntityTypes.LIQUFIED_SKELETON, "Liquefied Skeleton")
     }
 }

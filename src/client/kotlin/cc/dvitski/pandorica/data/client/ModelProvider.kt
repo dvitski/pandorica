@@ -25,6 +25,7 @@ class ModelProvider(output: FabricDataOutput) : FabricModelProvider(output) {
         generator.generateFlatItem(PandoricaItems.LIQUEFIED_BONE, ModelTemplates.FLAT_ITEM)
         generator.generateFlatItem(PandoricaItems.WITHERED_BONE, ModelTemplates.FLAT_ITEM)
         generator.generateFlatItem(PandoricaItems.WITHERMEAL, ModelTemplates.FLAT_ITEM)
+        generator.generateFlatItem(PandoricaItems.LIQUEFIED_SKELETON_SPAWN_EGG, ModelTemplates.FLAT_ITEM)
     }
 
     companion object {

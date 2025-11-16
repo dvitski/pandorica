@@ -2,11 +2,14 @@ package cc.dvitski.pandorica.item
 
 import cc.dvitski.pandorica.Pandorica
 import cc.dvitski.pandorica.block.PandoricaBlocks
+import cc.dvitski.pandorica.entity.PandoricaEntityTypes
 import net.minecraft.core.registries.Registries
 import net.minecraft.resources.ResourceKey
 import net.minecraft.resources.ResourceLocation
+import net.minecraft.world.entity.EntityType
 import net.minecraft.world.item.Item
 import net.minecraft.world.item.Items
+import net.minecraft.world.item.SpawnEggItem
 import net.minecraft.world.level.block.Block
 
 object PandoricaItems {
@@ -19,13 +22,19 @@ object PandoricaItems {
     val WITHERED_BONE = register("withered_bone")
     val WITHERMEAL = register("withermeal", ::WithermealItem)
 
+    val LIQUEFIED_SKELETON_SPAWN_EGG = registerSpawnEgg("liquefied_skeleton_spawn_egg", PandoricaEntityTypes.LIQUFIED_SKELETON)
+
     private fun register(block: Block): Item {
         return Items.registerBlock(block)
     }
 
-    private fun register(id: String, factory: (Item.Properties) -> Item = ::Item): Item {
+    private fun register(id: String, factory: (Item.Properties) -> Item = ::Item, properties: Item.Properties = Item.Properties()): Item {
         val location = ResourceLocation.fromNamespaceAndPath(Pandorica.MOD_ID, id)
         val key = ResourceKey.create(Registries.ITEM, location)
-        return Items.registerItem(key, factory)
+        return Items.registerItem(key, factory, properties)
+    }
+
+    private fun registerSpawnEgg(id: String, type: EntityType<*>): Item {
+        return register(id, ::SpawnEggItem, Item.Properties().spawnEgg(type))
     }
 }

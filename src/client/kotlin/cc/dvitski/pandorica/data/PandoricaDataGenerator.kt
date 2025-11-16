@@ -2,11 +2,14 @@ package cc.dvitski.pandorica.data
 
 import cc.dvitski.pandorica.data.client.LanguageProvider
 import cc.dvitski.pandorica.data.client.ModelProvider
+import cc.dvitski.pandorica.data.server.BiomeTagProvider
 import cc.dvitski.pandorica.data.server.BlockLootTableProvider
 import cc.dvitski.pandorica.data.server.BlockTagProvider
 import cc.dvitski.pandorica.data.server.DynamicRegistryProvider
 import cc.dvitski.pandorica.data.server.EnchantmentProvider
 import cc.dvitski.pandorica.data.server.EnchantmentTagProvider
+import cc.dvitski.pandorica.data.server.EntityLootTableProvider
+import cc.dvitski.pandorica.data.server.EntityTypeTagProvider
 import cc.dvitski.pandorica.data.server.ItemTagProvider
 import cc.dvitski.pandorica.data.server.RecipeProvider
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint
@@ -18,13 +21,21 @@ object PandoricaDataGenerator : DataGeneratorEntrypoint {
         val pack = generator.createPack()
 
         pack.addProvider(::EnchantmentProvider)
+        pack.addProvider(::DynamicRegistryProvider)
+
+        pack.addProvider(::BlockLootTableProvider)
+        pack.addProvider(::EntityLootTableProvider)
+
         pack.addProvider(::ItemTagProvider)
         pack.addProvider(::BlockTagProvider)
         pack.addProvider(::EnchantmentTagProvider)
-        pack.addProvider(::BlockLootTableProvider)
+        pack.addProvider(::BiomeTagProvider)
+        pack.addProvider(::EntityTypeTagProvider)
+
         pack.addProvider(::LanguageProvider)
+
         pack.addProvider(::ModelProvider)
-        pack.addProvider(::DynamicRegistryProvider)
+
         pack.addProvider(::RecipeProvider)
 	}
 

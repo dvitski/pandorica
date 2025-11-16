@@ -1,9 +1,11 @@
 {
   "block.pandorica.crumbled_basalt": "Crumbled Basalt",
   "block.pandorica.magma_tongue": "Magma Tongue",
+  "entity.pandorica.liquefied_skeleton": "Liquefied Skeleton",
   "item.pandorica.basalt_dust": "Basalt Dust",
   "item.pandorica.crusted_magma": "Crusted Magma",
   "item.pandorica.liquefied_bone": "Liquefied Bone",
+  "item.pandorica.liquefied_skeleton_spawn_egg": "Liquefied Skeleton Spawn Egg",
   "item.pandorica.withered_bone": "Withered Bone",
   "item.pandorica.withermeal": "Withermeal",
   "itemGroup.pandorica.item_group": "Pandorica"

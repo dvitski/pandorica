@@ -1,6 +1,7 @@
 package cc.dvitski.pandorica
 
 import cc.dvitski.pandorica.block.PandoricaBlocks
+import cc.dvitski.pandorica.entity.PandoricaEntityTypes
 import cc.dvitski.pandorica.item.PandoricaItemGroups
 import cc.dvitski.pandorica.item.PandoricaItems
 import cc.dvitski.pandorica.particle.PandoricaParticleTypes
@@ -25,6 +26,7 @@ object Pandorica : ModInitializer {
         PandoricaBlocks
         PandoricaItems
         PandoricaItemGroups
+        PandoricaEntityTypes
 
         PandoricaWorldGen.initialize()
         PandoricaLootModifications.initialize()
